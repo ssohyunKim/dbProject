@@ -6,7 +6,7 @@
 <BODY>
 	<table width="75%" align="center" bgcolor="#FFFF99" border>
 		<tr>
-			<td><div align="center">아이디와 패스워드를 입력하세요
+			<td><div align="center">Login
 	</table>
 	<table width="75%" align="center" border>
 		<FORM method="post" action="login_verify.jsp">
