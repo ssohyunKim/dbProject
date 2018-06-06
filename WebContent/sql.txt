@@ -1,0 +1,12 @@
+CREATE TABLE student( s_id VARCHAR2(20) not null, s_pwd VARCHAR2(20)  not null, s_name VARCHAR2(20) not null, CONSTRAINT s_pk PRIMARY KEY (s_id));
+
+CREATE TABLE professor (p_id VARCHAR(20) not null, p_pwd VARCHAR(20) not null, p_name VARCHAR(20) not null, CONSTRAINT p_pk PRIMARY KEY (p_id));
+
+CREATE TABLE enroll( s_id VARCHAR(20) NOT NULL, c_id VARCHAR(20) not null,
+c_id_no NUMBER not null, c_name VARCHAR(30) not null, c_unit NUMBER not null, c_year NUMBER not null, c_semester NUMBER not null, c_time NUMBER not null, CONSTRAINT c_pk PRIMARY KEY (c_id));
+
+CREATE TABLE teach( p_id VARCHAR(20) NOT NULL, c_id VARCHAR(20) not null, c_id_no NUMBER not null,c_name VARCHAR(30) not null,c_unit NUMBER not null,c_year NUMBER not null,c_semester NUMBER not null,c_time NUMBER not null,CONSTRAINT t_pk PRIMARY KEY (c_id));
+
+
+
+
