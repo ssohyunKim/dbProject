@@ -5,6 +5,7 @@
 <%
 	String session_id = (String) session.getAttribute("user");
 	String session_name = (String) session.getAttribute("user_name");
+	String session_mode=(String)session.getAttribute("chk_info");
 	String log;
 	if (session_id == null)
 		log = "<a href=login.jsp>로그인</a>";
