@@ -2,7 +2,7 @@
 <HTML>
 <head>
 <title>수강신청 시스템 로그인</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <!-- <BODY>
 	<table width="75%" align="center" bgcolor="#FFFF99" border>

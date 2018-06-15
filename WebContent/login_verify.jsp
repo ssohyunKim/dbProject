@@ -42,6 +42,7 @@
 						+ userPassword + "'";
 				rs = stmt.executeQuery(mySQL);
 				//p_rs = p_stmt.executeQuery(p_mySQL);
+
 			}
 		} catch (SQLException e) {
 			out.println(e);
@@ -62,13 +63,13 @@
 	<%
 		} else { //사용자 정보가 없을 때
 			%>
-			<script>
+	<script>
 			alert("Wrong ID/Password. Please Check!!"); //메시지 알림 후
 			location.href = "login.jsp";
 		</script>
-		<% 	}
+	<% 	}
 	%>
-	
+
 	<%
 		}
 		stmt.close();

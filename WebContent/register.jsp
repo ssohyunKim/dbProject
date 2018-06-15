@@ -2,7 +2,7 @@
 <HTML>
 <head>
 <title>수강신청 시스템 회원가입</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
 <div class="login-card">
