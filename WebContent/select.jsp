@@ -18,7 +18,7 @@
 <title>수강신청 조회</title>
 
 <body>
-	<table width="1000" align="center" class="type11">
+	<table width="100%" align="center" class="type11" >
 <thead>
 		<tr class="label">
 			<th scope="cols">과목번호</th>
@@ -60,9 +60,9 @@
 			myConn = DriverManager.getConnection(dburl, user, passwd);
 
 			if(session_mode.equals("professor")){
-				sql = "select c_id, c_id_no, c_name, c_unit, c_year, c_semester, c_time from teach where p_id=?";
+				sql = "select c_id, c_id_no, c_name, c_unit, c_year, c_semester, c_time from teach where p_id=? order by c_id, c_id_no";
 			}else{
-				sql = "select c_id, c_id_no, c_name, c_unit, c_year, c_semester, c_time from enroll where s_id=?";
+				sql = "select c_id, c_id_no, c_name, c_unit, c_year, c_semester, c_time from enroll where s_id=? order by c_id, c_id_no";
 			}
 				pstmt = myConn.prepareStatement(sql);
 				pstmt.setString(1, session_id);
