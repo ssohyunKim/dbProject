@@ -18,17 +18,18 @@
 <title>수강신청 조회</title>
 
 <body>
-	<table border="1" width="800" align="center" class="type08">
-
+	<table width="1000" align="center" class="type11">
+<thead>
 		<tr class="label">
-			<th>과목번호</th>
-			<th>분반</th>
-			<th>과목명</th>
-			<th>학점</th>
-			<th>년도</th>
-			<th>학기</th>
-			<th>수업시간</th>
+			<th scope="cols">과목번호</th>
+			<th scope="cols">분반</th>
+			<th scope="cols">과목명</th>
+			<th scope="cols">학점</th>
+			<th scope="cols">년도</th>
+			<th scope="cols">학기</th>
+			<th scope="cols">수업시간</th>
 		</tr>
+		</thead>
 		
 		<%
 		Connection myConn = null;
