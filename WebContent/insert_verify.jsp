@@ -6,7 +6,7 @@
 
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<link rel="stylesheet" type="text/css" href="style.css">
+
 <title> 수강신청 입력 </title></head>
 <body>
 
@@ -57,7 +57,7 @@
       }
       
      
-	  //수강최대인원
+     //수강최대인원
       String c_max = request.getParameter("c_max");
       int max = 0;
       if(!c_max.equals(""))
@@ -154,16 +154,16 @@
                  cstmt.setInt(2, unit);
                  cstmt.setString(3, id);
                  cstmt.setString(4, c_id);
-               	 cstmt.setInt(5,c_id_no+1);
-               	 cstmt.setInt(6, time);
-               	 cstmt.setInt(7,max);
+                   cstmt.setInt(5,c_id_no+1);
+                   cstmt.setInt(6, time);
+                   cstmt.setInt(7,max);
 
                
                try{
                  cstmt.registerOutParameter(8, java.sql.Types.VARCHAR);
                  cstmt.execute();
                }catch(SQLException ex){
-            	   System.err.println("SQLException:"+ex.getMessage());
+                  System.err.println("SQLException:"+ex.getMessage());
                }
                  result = cstmt.getString(8);
                  out.print("\n"+result+"....");
@@ -200,9 +200,12 @@
       }
    }
    else{
+      
       String s_id = (String)session.getAttribute("user");
-      String c_id = request.getParameter("c_id");
-      int c_id_no = Integer.parseInt(request.getParameter("c_id_no"));
+      String c_id = (String)request.getParameter("c_id");
+      String temp = (String)request.getParameter("c_id_no");
+      out.println(s_id+c_id+temp);
+      int c_id_no = Integer.parseInt(temp);
 
       Connection myConn = null;    String   result = null;   
       String dburl  = "jdbc:oracle:thin:@localhost:1521:orcl";
